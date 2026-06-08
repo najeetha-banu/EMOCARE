@@ -9,20 +9,22 @@ A comprehensive deep learning system that monitors mental health by analyzing **
 Traditional mental health monitoring relies on manual assessment and delayed intervention. This project automates emotion detection and combines multiple signals (facial, text, behavioral) for early intervention.
 
 ## System Architecture
-Input (Image/Video/Text)
-↓
-├─ Facial Emotion Recognition
-│  └─ EfficientNetB0 + Attention (7 emotions)
-├─ Text Sentiment Analysis
-│  └─ TextBlob + NLP
-└─ Behavioral Assessment
-└─ Questionnaire + Bayesian Network
-↓
-Combined Mental Health Signal
-↓
-Fairness Analysis (Demographic Parity, Equalized Odds)
-↓
-Final Mental Health Report
+
+The system processes input through multiple parallel analysis paths:
+
+**Input:** Image, Video, or Text
+
+**Processing Pipeline:**
+1. **Facial Emotion Recognition** → EfficientNetB0 + Attention mechanism → 7 emotion classes
+2. **Text Sentiment Analysis** → TextBlob + NLP → Sentiment score
+3. **Behavioral Assessment** → Questionnaire + Bayesian Network → Behavioral signal
+
+**Integration:** Combines all three signals
+
+**Fairness Check:** Demographic parity & equalized odds analysis
+
+**Output:** Final Mental Health Report with recommendations
+
 ## Key Features
 
 ### 1. Facial Emotion Recognition
